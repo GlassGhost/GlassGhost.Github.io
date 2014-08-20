@@ -1,13 +1,31 @@
-<!DOCTYPE html><html style="width:100%; height:100%; background:url(http://imageshack.us/a/img715/2300/bootanimationf.gif) center center no-repeat; background-color:#000000;color:#ffffff;">
-<head><meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<title>GlassGhost.github.io/</title>
+<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<title>GlassGhost.github.io</title>
 <!--for some html templates go to: https://gist.github.com/GlassGhost/1272801-->
 <!-------------------------Built-In Scripts and Styles------------------------->
 <script language=javascript type='text/javascript'>
 </script>
-<style type="text/css">
-table, td, th {border:white; border-collapse:collapse;}
-</style>
+<style type="text/css">/* <![CDATA[ */
+body {	height:100%; width:100%; margin:0em; border:0em; padding:0em;
+		background:#000000 url(./spin.gif) repeat center center fixed;
+		/*background:color image repeat attachment position;*/
+		text-align:justify;
+		color:#00AAFF;
+}
+#Content {	height:100%; width:80%; margin:0em auto; border:0em; padding:2em;
+			background:#000000 none;
+			/*background:color image repeat attachment position;*/
+}
+table, td {	border-style: solid;}
+table {		border-width: 0 0 1px 1px;
+			border-spacing: 0;
+			border-collapse: collapse;
+}
+td {		margin: 0;
+			border-width: 1px 1px 0 0;
+}
+/* ]]> */</style>
+<!--table {border-width: 0 0 1px 1px; border-style: solid;}-->
+<!--table, td, th {border:white; border-collapse:collapse;}-->
 <!--<script type="text/x-mathjax-config">-->
 <!--	MathJax.Hub.Config({-->
 <!--	"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },-->
@@ -36,9 +54,68 @@ table, td, th {border:white; border-collapse:collapse;}
 <script id="http://www.mathjax.org/" type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/javascript" src="./default.js"></script>
 <link rel="stylesheet" type="text/css" href="./default.css"/>
-</head><!---------------------------><body><!---------------------------------->
-&nbsp;<script type="math/tex;"></script>&nbsp;<br/>
+</head><!----------------------------------------------------------------><body>
+<div id="Content"><!--&nbsp;<script type="math/tex;"></script>&nbsp;<br/>-->
+<hr/><b>Logic</b><br/>
+<div style="float:right;"><table border="1pt">
+<tr>
+  <th colspan="4">The 2 inputs Propositions A &amp; B with 4 possible<br/>combinations, yield exactly 2<sup>4</sup> binary operands.</th>
+  <th colspan="4">Truth<br/>Table</th>
+</tr>
+<tr><td rowspan="2">Outputs 1, 0, ¬A, and<br/>¬B are not shown</td>
+  	<td colspan="3">A</td><td>0</td><td>0</td><td>1</td><td>1</td></tr>
+<tr><td colspan="3">B</td><td>0</td><td>1</td><td>0</td><td>1</td></tr>
 
+<tr><td>1;Conjunction</td><td>A and B</td><td>AB</td><td>A∧B</td><td>0</td><td>0</td><td>0</td><td>1</td></tr>
+<tr><td>2;Material Nonimplication</td><td>AB</td><td>AB̄</td><td>A∧¬B</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+<tr><td>4;Converse Nonimplication</td><td>AB</td><td>ĀB</td><td>¬A∧B</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+<tr><td>8;Joint Denial</td><td>A nor B</td><td>ĀB̄</td><td>A⊽B</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+
+<tr><td>E;Alternative Denial</td><td>A nand B</td><td>Ā+B̄</td><td>A⊼B</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>D;Material Implication</td><td>AB</td><td>Ā+B</td><td>¬A∨B</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+<tr><td>B;Converse Implication</td><td>AB</td><td>A+B̄</td><td>A∨¬B</td><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+<tr><td>7;Disjunction</td><td>A or B</td><td>A+B</td><td>A∨B</td><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+
+<tr><td>6;Exclusive Disjunction</td><td>A inequal to B</td><td>AB̄+ĀB</td><td>A≠B</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>9;Biconditional</td><td>A equal to B</td><td>ĀB̄+AB</td><td>A=B</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+
+<tr><td colspan="8">make all the logic operands out of nand or nor operands</td></tr>
+
+</table></div><br/>
+
+<b>Set Logic:</b> a set is a group of objects, elements, or members represented as a unit, the set may be finite or infinite, the order of the objects is not pertinent. The character “∈” is used to denote if an object membership to a set. E.G. √2∈ℝ, but ℚ∌√2 is read “√2 is an element in the set of real numbers, but the set of rational numbers does not contain the element √2.
+<br/>Important Sets:<ol style="list-Style-Type:none;">
+<li>∅, denoting the empty set: ∅ = {}.</li>
+<li>ℙ, denoting the set of all primes: P = {2, 3, 5, 7, 11, 13, 17, ...}.</li>
+<li>ℕ, denoting the set of all natural numbers: N = {1, 2, 3, . . .} (sometimes defined containing 0).</li>
+<li>ℤ, denoting the set of all integers (whether positive, negative or zero): Z = {..., −2, −1, 0, 1, 2, ...}.</li>
+<li>ℚ, denoting the set of all rational numbers (that is, the set of all proper and improper fractions): Q = {a/b : a, b ∈ Z, b ≠ 0}. For example, 1/4 ∈ Q and 11/6 ∈ Q. All integers are in this set since every integer a can be expressed as the fraction a/1 (Z ⊊ Q).</li>
+<li>ℝ, denoting the set of all real numbers. This set includes all rational numbers, together with all irrational numbers (that is, numbers that cannot be rewritten as fractions, such as √2, as well as transcendental numbers such as π, e and numbers that cannot be defined).</li>
+<li>ℂ, denoting the set of all complex numbers: C = {a + bi : a, b ∈ R}. For example, 1 + 2i ∈ C.</li>
+<li>ℍ, denoting the set of all quaternions: H = {a + bi + cj + dk : a, b, c, d ∈ R}. For example, 1 + i + 2j − k ∈ H.</li>
+</ol><br/>
+
+
+<br/><b>Sequences and Tuples:</b> a sequence is a set in which order is pertinent. Finite sequences often are called tuples. A sequence with k elements is a k-tuple.
+
+<br/><b>(Undir/Dir)ected Graphs:</b> pair notation: the set of vertices or nodes followed by the set of (edges, lines, arcs, or arrows) that connect the nodes.
+<br/><b>FSM (Finite State Automata):</b> When we know what the next state will based on the current state We call this deterministic computation.
+
+<br/>Valid Argument Forms
+<br/>Fallacies:<ol style="list-Style-Type:none;">
+<li>Modus Ponens: <b>A</b> → <b>B</b>; <b>A</b>; ∴ <b>B</b>;</li>
+<li>Modus Tollens: <b>A</b> → <b>B</b>; ¬ <b>B</b>; ∴ ¬ <b>A</b>;</li>
+<li>Generalization: <b>A</b>; ∴ <b>A</b> ∨ <b>B</b>: <b>B</b>; ∴ <b>A</b> ∨ <b>B</b>;</li>
+<li>Specialization: <b>A</b> ∧ <b>B</b>;  ∴ <b>A</b> and ∴ <b>B</b>;</li>
+<li>Conjunction: <b>A</b>; <b>B</b>; ∴ <b>A</b> ∧ <b>B</b>;</li>
+<li>Elimination: <b>A</b> ∨ <b>B</b>; ¬ <b>B</b>; ∴ <b>A</b>;</li>
+<li>Transitivity: <b>A</b> → <b>B</b>; <b>B</b> → r; ∴ <b>A</b> → r;</li>
+<li>Division into Cases: <b>A</b> ∨ <b>B</b>; <b>A</b> → r; <b>B</b> → r; ∴ r;</li>
+<li>Contradiction Rule: ¬ <b>A</b> → ⊥; ∴ <b>A</b>;</li>
+</ol><br/>
+
+<hr/><b>Trigonometry</b><br/>
+<!--<script type="math/tex">\cos x = \sum_{n=0}^\infty \frac{(-1)^n x^{2n}}{(2n)!}</script>-->
 <br/><script type="math/tex;">\text{for }\ 0\leq k\leq n; \quad \binom nk = \frac{n!}{k!\,(n-k)!} = \frac{n^{\underline{k}}}{k!} = \frac{n(n-1)(n-2)⋅s(n-(k-1))}{k(k-1)(k-2)⋅s 1}=\prod_{i=1}^k \frac{n-(k-i)}{i}=\prod_{i=1}^k \frac{n+1-i}{i},</script>&nbsp;<br/>
 <script type="math/tex;">±\sqrt{R^2-(x-C_x)^{2}}+C_y=</script>a circle with &quot;<script type="math/tex;">\text{radius}=R</script>&quot; centered on the point <script type="math/tex;">(C_x , C_y)</script><br/>
 On a triangle with sides a, b, & c with angles A, B, & C opposite their respectful sides. Where&nbsp;<script type="math/tex;">1\text{turn}=τ=2π\text{Radians}=360°=400\text{gon}</script>;<br/>
@@ -75,8 +152,6 @@ A. H. J. Sale Spigot Algorithm for e<br/>
 					e^1 &= \frac{1}{0!} + \frac{1}{1!} + \frac{1}{2!} + \text{⋅ ⋅ ⋅} \\
 \end{align}</script><br/>
 
-<!--((3^.5)-e+1)*4=0.05507591643-->
-
 <hr/>Calculus<script type="math/tex;"></script><br/>
 Where <script type="math/tex;">y=f(x)</script>, and <script type="math/tex;">g(x)</script> is the <script type="math/tex;">n</script>th derivative of <script type="math/tex;">f(x)</script> with respect to <script type="math/tex;">x</script> then;<br/>
 <script type="math/tex;">\lim_{Δ x\rightarrow 0}\frac{Δ y}{Δ x}=\lim_{Δ x\rightarrow 0}\frac{f(x + Δ x)-f(x)}{Δ x} = g(x)=\underbrace{\left( \frac{d}{dx} \right)^n ⋅ f(x)=\left( \frac{d}{dx} \right)^n ⋅ y}_{\text{Leibniz's notation}}=(dx)^{-n} d^ny</script><br/>
@@ -102,7 +177,12 @@ Where:<br/>
 <script type="math/tex;">N</script> is the average noise or interference power over the bandwidth, measured in watts (or volts squared); and<br/>
 <script type="math/tex;">\frac{S}{N}</script> is the [[signal-to-noise ratio]] (SNR) or the [[carrier-to-noise ratio]] (CNR) of the communication signal to the Gaussian noise interference expressed as a linear power ratio (not as logarithmic [[decibels]]).<br/>
 
-<!--<script type="math/tex">\cos x = \sum_{n=0}^\infty \frac{(-1)^n x^{2n}}{(2n)!}</script>-->
+<hr/>Slide Ruler Rules<script type="math/tex;"></script><br/>
+<script type="math/tex;">\begin{align}
+	\ln(xy) &= \ln(x) + \ln(y)\\
+	\ln(x/y) &= \ln(x) - \ln(y)
+\end{align}</script><br/>
+
 <br/><hr/><br/>
 Any five card poker hand-&nbsp;<script type="math/tex;">{52 \choose 5} = 2,598,960</script>&nbsp;<br/>
 Straight Flush-&nbsp;<script type="math/tex;">{10 \choose 1}{4 \choose 1}-{5 \choose 5}{8 \choose 0}{4 \choose 1} = 40 -4 = 36</script>&nbsp;<br/>
@@ -115,4 +195,137 @@ Straight-&nbsp;<script type="math/tex;">{10 \choose 1}{4 \choose 1}^5 - 40 = 10,
 Pair-&nbsp;<script type="math/tex;">{13 \choose 1}{4 \choose 2}{12 \choose 3}{4 \choose 1}^3 = 1,098,240</script>&nbsp;<br/>
 High Card-&nbsp;<script type="math/tex;">\left[{13 \choose 5} - 10\right]\left[{4 \choose 1}^5 - 4\right] = {52 \choose 5} - 1,296,420 = 1,302,540</script>&nbsp;<br/>
 
+
+<code><![CDATA[
+       ╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮
+       │ ♠ ││ ♠ ││♠ ♠││♠ ♠││♠ ♠││♠ ♠││♠♠♠││♠♠♠││   ││ J ││ Q ││ K ││   │
+       │   ││ ♠ ││   ││ ♠ ││♠ ♠││♠♠♠││♠ ♠││♠♠♠││♠10││ ♠ ││ ♠ ││ ♠ ││ ♠ │
+       │ ♠ ││ ♠ ││♠ ♠││♠ ♠││♠ ♠││♠ ♠││♠♠♠││♠♠♠││   ││   ││   ││   ││   │
+       ╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯
+       ╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮
+       │ ♣ ││ ♣ ││♣ ♣││♣ ♣││♣ ♣││♣ ♣││♣♣♣││♣♣♣││   ││ J ││ Q ││ K ││   │
+       │   ││ ♣ ││   ││ ♣ ││♣ ♣││♣♣♣││♣ ♣││♣♣♣││♣10││ ♣ ││ ♣ ││ ♣ ││ ♣ │
+       │ ♣ ││ ♣ ││♣ ♣││♣ ♣││♣ ♣││♣ ♣││♣♣♣││♣♣♣││   ││   ││   ││   ││   │
+       ╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯
+       ╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮
+       │ ♥ ││ ♥ ││♥ ♥││♥ ♥││♥ ♥││♥ ♥││♥♥♥││♥♥♥││   ││ J ││ Q ││ K ││   │
+       │   ││ ♥ ││   ││ ♥ ││♥ ♥││♥♥♥││♥ ♥││♥♥♥││♥10││ ♥ ││ ♥ ││ ♥ ││ ♥ │
+       │ ♥ ││ ♥ ││♥ ♥││♥ ♥││♥ ♥││♥ ♥││♥♥♥││♥♥♥││   ││   ││   ││   ││   │
+       ╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯
+       ╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮
+       │ ♦ ││ ♦ ││♦ ♦││♦ ♦││♦ ♦││♦ ♦││♦♦♦││♦♦♦││   ││ J ││ Q ││ K ││   │
+       │   ││ ♦ ││   ││ ♦ ││♦ ♦││♦♦♦││♦ ♦││♦♦♦││♦10││ ♦ ││ ♦ ││ ♦ ││ ♦ │
+       │ ♦ ││ ♦ ││♦ ♦││♦ ♦││♦ ♦││♦ ♦││♦♦♦││♦♦♦││   ││   ││   ││   ││   │
+       ╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯
+]]></code>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Leaderboard -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-2020787012027155"
+     data-ad-slot="3117468622"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
 </body></html><!--------------------------------------------------END OF FILE-->
+<!-- UTF-8 test:		0123456789abcdefghijklmnopqrstuvwxyz`-=[]\;',./
+						)!@#$%^&*(ABCDEFGHIJKLMNOPQRSTUVWXYZ~_+{}|:"<>?
+
+logic: ¬, ∧, ⊼, ∨, ⊽, ⊻,⊕
+size&equality: ≡,=,≢,≠,≅,≆,≇,≤,≥,<,>,≮,≯,≰,≱,≪,≫
+assignment: ≔≕
+predicate logic:	∃,∄,∀,∴,∵
+Set logic:	∪,∩,⊊,⊋,⊆,⊇,⊈,⊉,≡	avoid useage of non-specific: ⊂,⊃,⊄,⊅
+Set Membership:	∈,∉,∌,∋,∅
+
+┏┳┓┣╋┫┗┻┛━┃╔╦╗╠╬╣╚╩╝═║■□▪▫○●
+█▓▒░ 
+numbers:ℕatural={0,1,2,3}, ℤintegers,
+		ℚ=rational, ¬ℚ=irrational,
+		ℝeal, ±∞, ℂomplex
+perl regex: /{,}[]()^$.|*+?\
+
+Arrows:
+↖↑↗⇖⇑⇗
+←↔→⇐⇔⇒⇕↕
+↙↓↘⇙⇓⇘
+↚↮↛⇍⇎⇏
+
+miscellaneous:°∙■□▪▫○●∂∅∆∇∑∏∙∗⚡
+fractions:⅛, ¼, ⅜, ½, ⅝, ¾, ⅞
+Box Drawing:
+┌┬┐┏┳┓╔╦╗
+├┼┤┣╋┫╠╬╣
+└┴┘┗┻┛╚╩╝
+─│ ━┃ ═║
+╭╮╰╯
+Game:
+	Chess symbols: ♛♚♝♞♜♟♕♔♗♘♖♙
+	Playing card symbols: ♠♣♥♦ 23456789 10JQKA
+	Checkers: ⛀ ⛁ ⛂ ⛃
+                       ┌───┬───┬───┬───┬───┬───┬───┬───┐
+                       │ ♜ │ ♞ │ ♝ │ ♛ │ ♚ │ ♝ │ ♞ │ ♜ │
+                       ├───┼───┼───┼───┼───┼───┼───┼───┤
+                       │ ♟ │ ♟ │ ♟ │ ♟ │ ♟ │ ♟ │ ♟ │ ♟ │
+                       ├───┼───┼───┼───┼───┼───┼───┼───┤
+                       │   │   │   │   │   │   │   │   │
+                       ├───┼───┼───┼───┼───┼───┼───┼───┤
+                       │   │   │   │   │   │   │   │   │
+                       ├───┼───┼───┼───┼───┼───┼───┼───┤
+                       │   │   │   │   │   │   │   │   │
+                       ├───┼───┼───┼───┼───┼───┼───┼───┤
+                       │   │   │   │   │   │   │   │   │
+                       ├───┼───┼───┼───┼───┼───┼───┼───┤
+                       │ ♙ │ ♙ │ ♙ │ ♙ │ ♙ │ ♙ │ ♙ │ ♙ │
+                       ├───┼───┼───┼───┼───┼───┼───┼───┤
+                       │ ♖ │ ♘ │ ♗ │ ♕ │ ♔ │ ♗ │ ♘ │ ♖ │
+                       └───┴───┴───┴───┴───┴───┴───┴───┘
+
+                   ╭13─14─15─16─17─18─┬───┬19─20─21─22─23─24─╮
+                   │ X           O    │   │ O              X │
+                   │ X           O    │   │ O              X │
+                   │ X           O    │   │ O                │
+                   │ X                │   │ O                │
+                   │ X                │   │ O                │
+                  v│                  │BAR│                  │
+                   │ O                │   │ X                │
+                   │ O                │   │ X                │
+                   │ O           X    │   │ X                │
+                   │ O           X    │   │ X              O │
+                   │ O           X    │   │ X              O │
+                   ╰12─11─10──9──8──7─┴───┴─6──5──4──3──2──1─╯
+
+                                     │   │
+                                     │   │ 
+                                 ────┼───┼────
+                                     │   │ 
+                                 ────┼───┼────
+                                     │   │ 
+                                     │   │
+
+Αα Alpha, Ββ Beta, Γγ Gamma, Δδ Delta, Εε Epsilon, Ζζ Zeta, Ηη Eta, Θθ Theta,
+Ιι Iota, Κκ Kappa, Λλ Lambda, Μμ Mu, Νν Nu, Ξξ Xi, Οο Omicron, Ππ Pi,
+Ρρ Rho, Σσς Sigma, Ττ Tau, Υυ Upsilon, Φφ Phi, Χχ Chi, Ψψ Psi, Ωω Omega
+                                                  ς
+                α β γ δ ε ζ η θ ι κ λ μ ν ξ ο π ρ σ τ υ φ χ ψ ω
+                Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω
+                l e a e p e t h o a a u u i m i h i a p h h s m
+                p t m l s t a e t p m       i   o g u s i i i e
+                h a m t i a   t a p b       c     m   i       g
+                a   a a l     a   a d       r     a   l       a
+                        o           a       o         o
+                        n                   n         n
+
+python regex:	{}[]()^$|.*+?\
+
+perl regex:		/{,}[]()^$.|*+?\
+Perl Regex matching:		*={0,}		+={1,}		?={0,1}
+	1. *+ Match 0 or more times and give nothing back
+	2. ++ Match 1 or more times and give nothing back
+	3. ?+ Match 0 or 1 time and give nothing back
+	4. {n}+ Match exactly n times and give nothing back (redundant)
+	5. {0,}+ Match at least n times and give nothing back
+	6. {n,m}+ Match at least n but not more than m times and give nothing back
+-->
+<!--((3^.5)-e+1)*4=0.05507591643-->
