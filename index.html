@@ -1,12 +1,11 @@
-<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<!doctype html><!--______________--><html lang="en"><head><meta charset="utf-8">
 <title>GlassGhost.github.io</title>
-<!--for some html templates go to: https://gist.github.com/GlassGhost/1272801-->
-<!-------------------------Built-In Scripts and Styles------------------------->
+<!--______________________________________________Built-In Scripts and Styles-->
 <script language=javascript type='text/javascript'>
 </script>
 <style type="text/css">/* <![CDATA[ */
 body {	height:100%; width:100%; margin:0em; border:0em; padding:0em;
-		background:#000000 url(./spin.gif) repeat center center fixed;
+		background:#000000 url(./spin.webp) repeat center center fixed;
 		/*background:color image repeat attachment position;*/
 		text-align:justify;
 		color:#00AAFF;
@@ -47,39 +46,69 @@ td {		margin: 0;
 <!--</script>-->
 <!--      inlineMath: [ ['$','$'], ["\\(","\\)"] ],-->
 <!--      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],-->
-<!--------------------------Scripts and Styles by URL-------------------------->
+<!--________________________________________________Scripts and Styles by URL-->
 <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
 <!--<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />-->
 <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>-->
-<script id="http://www.mathjax.org/" type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/javascript" src="./default.js"></script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+<!--<script type="text/javascript" src="./default.js"></script>-->
 <link rel="stylesheet" type="text/css" href="./default.css"/>
-</head><!----------------------------------------------------------------><body>
+<!--____________________________________________________________--></head><body>
 <div id="Content"><!--&nbsp;<script type="math/tex;"></script>&nbsp;<br/>-->
 <hr/><b>Logic</b><br/>
-<div style="float:right;"><table border="1pt">
+<div style="float:right;"><table border="1pt"><!--βψ-->
 <tr>
-  <th colspan="4">The 2 inputs Propositions A &amp; B with 4 possible<br/>combinations, yield exactly 2<sup>4</sup> binary operands.</th>
   <th colspan="4">Truth<br/>Table</th>
+  <th colspan="4">The 2 inputs Propositions β &amp; ψ with 4 possible<br/>combinations, yield exactly 2<sup>4</sup> binary operands.</th>
 </tr>
-<tr><td rowspan="2">Outputs 1, 0, ¬A, and<br/>¬B are not shown</td>
-  	<td colspan="3">A</td><td>0</td><td>0</td><td>1</td><td>1</td></tr>
-<tr><td colspan="3">B</td><td>0</td><td>1</td><td>0</td><td>1</td></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>1</td><td>Proposition β</td><td colspan="3" rowspan="2">Outputs 1, 0, ¬β, and<br/>¬ψ are not shown</td></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>1</td><td>Proposition ψ</td></tr>
 
-<tr><td>1;Conjunction</td><td>A and B</td><td>AB</td><td>A∧B</td><td>0</td><td>0</td><td>0</td><td>1</td></tr>
-<tr><td>2;Material Nonimplication</td><td>AB</td><td>AB̄</td><td>A∧¬B</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
-<tr><td>4;Converse Nonimplication</td><td>AB</td><td>ĀB</td><td>¬A∧B</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>
-<tr><td>8;Joint Denial</td><td>A nor B</td><td>ĀB̄</td><td>A⊽B</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+<tr>
+	<td>0</td><td>0</td><td>0</td><td>1</td>
+	<td>Conjunction</td><td>β and ψ</td><td>βψ</td><td>β∧ψ</td>
+</tr>
+<tr>
+	<td>0</td><td>0</td><td>1</td><td>0</td>
+	<td>Material Nonimplication</td><td>βψ</td><td>βψ̄</td><td>β∧¬ψ</td>
+</tr>
+<tr>
+	<td>0</td><td>1</td><td>0</td><td>0</td>
+	<td>Converse Nonimplication</td><td>βψ</td><td>β̄ψ</td><td>¬β∧ψ</td>
+</tr>
+<tr>
+	<td>1</td><td>0</td><td>0</td><td>0</td>
+	<td>Joint Denial</td><td>β nor ψ</td><td>β̄ψ̄</td><td>β⊽ψ</td>
+</tr>
 
-<tr><td>E;Alternative Denial</td><td>A nand B</td><td>Ā+B̄</td><td>A⊼B</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>
-<tr><td>D;Material Implication</td><td>AB</td><td>Ā+B</td><td>¬A∨B</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
-<tr><td>B;Converse Implication</td><td>AB</td><td>A+B̄</td><td>A∨¬B</td><td>1</td><td>0</td><td>1</td><td>1</td></tr>
-<tr><td>7;Disjunction</td><td>A or B</td><td>A+B</td><td>A∨B</td><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+<tr>
+	<td>0</td><td>1</td><td>1</td><td>1</td>
+	<td>Disjunction</td><td>β or ψ</td><td>β+ψ</td><td>β∨ψ</td>
+</tr>
+<tr>
+	<td>1</td><td>0</td><td>1</td><td>1</td>
+	<td>Converse Implication</td><td>βψ</td><td>β+ψ̄</td><td>β∨¬ψ</td>
+</tr>
+<tr>
+	<td>1</td><td>1</td><td>0</td><td>1</td>
+	<td>Material Implication</td><td>βψ</td><td>β̄+ψ</td><td>¬β∨ψ</td>
+</tr>
+<tr>
+	<td>1</td><td>1</td><td>1</td><td>0</td>
+	<td>Alternative Denial</td><td>β nand ψ</td><td>β̄+ψ̄</td><td>β⊼ψ</td>
+</tr>
 
-<tr><td>6;Exclusive Disjunction</td><td>A inequal to B</td><td>AB̄+ĀB</td><td>A≠B</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
-<tr><td>9;Biconditional</td><td>A equal to B</td><td>ĀB̄+AB</td><td>A=B</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+<tr>
+<td>0</td><td>1</td><td>1</td><td>0</td>
+<td>Exclusive Disjunction</td><td>β inequal to ψ</td><td>βψ̄+β̄ψ</td><td>β≠ψ</td>
+</tr>
+<tr>
+<td>1</td><td>0</td><td>0</td><td>1</td>
+<td>Biconditional</td><td>β equal to ψ</td><td>β̄ψ̄+βψ</td><td>β=ψ</td>
+</tr>
 
-<tr><td colspan="8">make all the logic operands out of nand or nor operands</td></tr>
+<tr><td colspan="8">make all the logic operands out of nand or nor operands</td>
+</tr>
 
 </table></div><br/>
 
@@ -116,7 +145,7 @@ td {		margin: 0;
 
 <hr/><b>Trigonometry</b><br/>
 <!--<script type="math/tex">\cos x = \sum_{n=0}^\infty \frac{(-1)^n x^{2n}}{(2n)!}</script>-->
-<br/><script type="math/tex;">\text{for }\ 0\leq k\leq n; \quad \binom nk = \frac{n!}{k!\,(n-k)!} = \frac{n^{\underline{k}}}{k!} = \frac{n(n-1)(n-2)⋅s(n-(k-1))}{k(k-1)(k-2)⋅s 1}=\prod_{i=1}^k \frac{n-(k-i)}{i}=\prod_{i=1}^k \frac{n+1-i}{i},</script>&nbsp;<br/>
+<br/><script type="math/tex;">\text{for }\ 0\leq k\leq n; \quad \binom nk = \frac{n!}{k!\,(n-k)!} = \frac{n^{\underline{k}}}{k!} = \frac{n(n-1)(n-2)⋅s(n-(k-1))}{k(k-1)(k-2)⋅s 1}=\prod_{i=1}^k \frac{n-(k-i)}{i}=\prod_{i=1}^k \frac{n+1-i}{i},</script><br/>
 <script type="math/tex;">±\sqrt{R^2-(x-C_x)^{2}}+C_y=</script>a circle with &quot;<script type="math/tex;">\text{radius}=R</script>&quot; centered on the point <script type="math/tex;">(C_x , C_y)</script><br/>
 On a triangle with sides a, b, & c with angles A, B, & C opposite their respectful sides. Where&nbsp;<script type="math/tex;">1\text{turn}=τ=2π\text{Radians}=360°=400\text{gon}</script>;<br/>
 <script type="math/tex;">\begin{align}
@@ -148,8 +177,16 @@ Bailey–Borwein–Plouffe formula<br/>
 <script type="math/tex;">π = \sum_{k = 0}^{\infty}\left[ \frac{1}{16^k} \left( \frac{4}{8k + 1} - \frac{2}{8k + 4} - \frac{1}{8k + 5} - \frac{1}{8k + 6} \right) \right]</script><br/>
 A. H. J. Sale Spigot Algorithm for e<br/>
 <script type="math/tex;">\begin{align}
-					e^x &=\lim_{n\to\infty}\left(1+\frac{x}{n}\right)^{n} = \sum_{n=0}^{\infty} \left( \frac{x^n}{n!} \right) = \frac{x^n}{0!} + \frac{x^n}{1!} + \frac{x^n}{2!} + \frac{x^n}{3!} + \text{⋅ ⋅ ⋅} \\
-					e^1 &= \frac{1}{0!} + \frac{1}{1!} + \frac{1}{2!} + \text{⋅ ⋅ ⋅} \\
+e^x &=\lim_{n\to\infty}\left(1+\frac{x}{n}\right)^{n} = \sum_{n=0}^{\infty} \left( \frac{x^n}{n!} \right) = \frac{x^n}{0!} + \frac{x^n}{1!} + \frac{x^n}{2!} + \frac{x^n}{3!} + \text{⋅ ⋅ ⋅} \\
+e^1 &= \frac{1}{0!} + \frac{1}{1!} + \frac{1}{2!} + \text{⋅ ⋅ ⋅} = 1 + 1(1 + \frac{1}{2}(1 + \frac{1}{3}(1 + \frac{1}{4}(1 + \text{⋅ ⋅ ⋅} \frac{1}{n}) \text{⋅ ⋅ ⋅} )))) \\
+e^1 &= 2 + \left[\frac{1}{2}(1 + \frac{1}{3}(1 + \frac{1}{4}(1 + \frac{1}{5}(1 + \frac{1}{6}(1 + \text{⋅ ⋅ ⋅} )))))\right] \\
+e^1 &= 2 + \frac{1}{10}\left[\frac{1}{2}(10 + \frac{1}{3}(10 + \frac{1}{4}(10 + \frac{1}{5}(10 + \frac{1}{6}(10 + \text{⋅ ⋅ ⋅} )))))\right] \\
+e^1 &= 2 + \frac{1}{10}\left[7+\frac{1}{2}(0 + \frac{1}{3}(1 + \frac{1}{4}(0 + \frac{1}{5}(1 + \frac{1}{6}(5 + \text{⋅ ⋅ ⋅} )))))\right] \\
+e^1 &= 2.7 + \frac{1}{100}\left[\frac{1}{2}(0 + \frac{1}{3}(10 + \frac{1}{4}(0 + \frac{1}{5}(10 + \frac{1}{6}(50 + \text{⋅ ⋅ ⋅} )))))\right] \\
+e^1 &= 2.7 + \frac{1}{100}\left[1+\frac{1}{2}(1 + \frac{1}{3}(1 + \frac{1}{4}(3 + \frac{1}{5}(4 + \frac{1}{6}(2 + \text{⋅ ⋅ ⋅} )))))\right] \\
+
+
+
 \end{align}</script><br/>
 
 <hr/>Calculus<script type="math/tex;"></script><br/>
@@ -197,40 +234,29 @@ High Card-&nbsp;<script type="math/tex;">\left[{13 \choose 5} - 10\right]\left[{
 
 
 <code><![CDATA[
-       ╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮
-       │ ♠ ││ ♠ ││♠ ♠││♠ ♠││♠ ♠││♠ ♠││♠♠♠││♠♠♠││   ││ J ││ Q ││ K ││   │
-       │   ││ ♠ ││   ││ ♠ ││♠ ♠││♠♠♠││♠ ♠││♠♠♠││♠10││ ♠ ││ ♠ ││ ♠ ││ ♠ │
-       │ ♠ ││ ♠ ││♠ ♠││♠ ♠││♠ ♠││♠ ♠││♠♠♠││♠♠♠││   ││   ││   ││   ││   │
-       ╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯
-       ╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮
-       │ ♣ ││ ♣ ││♣ ♣││♣ ♣││♣ ♣││♣ ♣││♣♣♣││♣♣♣││   ││ J ││ Q ││ K ││   │
-       │   ││ ♣ ││   ││ ♣ ││♣ ♣││♣♣♣││♣ ♣││♣♣♣││♣10││ ♣ ││ ♣ ││ ♣ ││ ♣ │
-       │ ♣ ││ ♣ ││♣ ♣││♣ ♣││♣ ♣││♣ ♣││♣♣♣││♣♣♣││   ││   ││   ││   ││   │
-       ╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯
-       ╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮
-       │ ♥ ││ ♥ ││♥ ♥││♥ ♥││♥ ♥││♥ ♥││♥♥♥││♥♥♥││   ││ J ││ Q ││ K ││   │
-       │   ││ ♥ ││   ││ ♥ ││♥ ♥││♥♥♥││♥ ♥││♥♥♥││♥10││ ♥ ││ ♥ ││ ♥ ││ ♥ │
-       │ ♥ ││ ♥ ││♥ ♥││♥ ♥││♥ ♥││♥ ♥││♥♥♥││♥♥♥││   ││   ││   ││   ││   │
-       ╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯
-       ╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮
-       │ ♦ ││ ♦ ││♦ ♦││♦ ♦││♦ ♦││♦ ♦││♦♦♦││♦♦♦││   ││ J ││ Q ││ K ││   │
-       │   ││ ♦ ││   ││ ♦ ││♦ ♦││♦♦♦││♦ ♦││♦♦♦││♦10││ ♦ ││ ♦ ││ ♦ ││ ♦ │
-       │ ♦ ││ ♦ ││♦ ♦││♦ ♦││♦ ♦││♦ ♦││♦♦♦││♦♦♦││   ││   ││   ││   ││   │
-       ╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯
 ]]></code>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Leaderboard -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-2020787012027155"
-     data-ad-slot="3117468622"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
+data-ad-client="ca-pub-2020787012027155" data-ad-slot="3117468622"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-</body></html><!--------------------------------------------------END OF FILE-->
+<!--________________________________________________END OF FILE--></body></html>
 <!-- UTF-8 test:		0123456789abcdefghijklmnopqrstuvwxyz`-=[]\;',./
 						)!@#$%^&*(ABCDEFGHIJKLMNOPQRSTUVWXYZ~_+{}|:"<>?
+€£¥
+                                                  ς
+                α β γ δ ε ζ η θ ι κ λ μ ν ξ ο π ρ σ τ υ φ χ ψ ω
+                Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω
+                l e a e p e t h o a a u u i m i h i a p h h s m
+                p t m l s t a e t p m       i   o g u s i i i e
+                h a m t i a   t a p b       c     m   i       g
+                a   a a l     a   a d       r     a   l       a
+                        o           a       o         o
+                        n                   n         n
+
+䷀䷁䷂䷃䷄䷅䷆䷇䷈䷉䷊䷋䷌䷍䷎䷏䷐䷑䷒䷓䷔䷕䷖䷗䷘䷙䷚䷛䷜䷝䷞䷟
+䷠䷡䷢䷣䷤䷥䷦䷧䷨䷩䷪䷫䷬䷭䷮䷯䷰䷱䷲䷳䷴䷵䷶䷷䷸䷹䷺䷻䷼䷽䷾䷿
 
 logic: ¬, ∧, ⊼, ∨, ⊽, ⊻,⊕
 size&equality: ≡,=,≢,≠,≅,≆,≇,≤,≥,<,>,≮,≯,≰,≱,≪,≫
@@ -304,19 +330,37 @@ Game:
                                      │   │ 
                                      │   │
 
+       ╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮
+       │ ♠ ││ ♠ ││♠ ♠││♠ ♠││♠ ♠││♠ ♠││♠♠♠││♠♠♠││   ││ J ││ Q ││ K ││   │
+       │   ││ ♠ ││   ││ ♠ ││♠ ♠││♠♠♠││♠ ♠││♠♠♠││♠10││ ♠ ││ ♠ ││ ♠ ││ ♠ │
+       │ ♠ ││ ♠ ││♠ ♠││♠ ♠││♠ ♠││♠ ♠││♠♠♠││♠♠♠││   ││   ││   ││   ││   │
+       ╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯
+       ╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮
+       │ ♣ ││ ♣ ││♣ ♣││♣ ♣││♣ ♣││♣ ♣││♣♣♣││♣♣♣││   ││ J ││ Q ││ K ││   │
+       │   ││ ♣ ││   ││ ♣ ││♣ ♣││♣♣♣││♣ ♣││♣♣♣││♣10││ ♣ ││ ♣ ││ ♣ ││ ♣ │
+       │ ♣ ││ ♣ ││♣ ♣││♣ ♣││♣ ♣││♣ ♣││♣♣♣││♣♣♣││   ││   ││   ││   ││   │
+       ╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯
+       ╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮
+       │ ♥ ││ ♥ ││♥ ♥││♥ ♥││♥ ♥││♥ ♥││♥♥♥││♥♥♥││   ││ J ││ Q ││ K ││   │
+       │   ││ ♥ ││   ││ ♥ ││♥ ♥││♥♥♥││♥ ♥││♥♥♥││♥10││ ♥ ││ ♥ ││ ♥ ││ ♥ │
+       │ ♥ ││ ♥ ││♥ ♥││♥ ♥││♥ ♥││♥ ♥││♥♥♥││♥♥♥││   ││   ││   ││   ││   │
+       ╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯
+       ╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮
+       │ ♦ ││ ♦ ││♦ ♦││♦ ♦││♦ ♦││♦ ♦││♦♦♦││♦♦♦││   ││ J ││ Q ││ K ││   │
+       │   ││ ♦ ││   ││ ♦ ││♦ ♦││♦♦♦││♦ ♦││♦♦♦││♦10││ ♦ ││ ♦ ││ ♦ ││ ♦ │
+       │ ♦ ││ ♦ ││♦ ♦││♦ ♦││♦ ♦││♦ ♦││♦♦♦││♦♦♦││   ││   ││   ││   ││   │
+       ╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯
+
+code	quantifier	subject	copula	predicate	type						example
+a		All			S		are		P			universal affirmatives		All humans are mortal.
+e		No			S		are		P			universal negatives			No humans are perfect.
+i		Some		S		are		P			particular affirmatives		Some humans are healthy.
+o		Some		S		are not	P			particular negatives		Some humans are not clever.
+
+
 Αα Alpha, Ββ Beta, Γγ Gamma, Δδ Delta, Εε Epsilon, Ζζ Zeta, Ηη Eta, Θθ Theta,
 Ιι Iota, Κκ Kappa, Λλ Lambda, Μμ Mu, Νν Nu, Ξξ Xi, Οο Omicron, Ππ Pi,
 Ρρ Rho, Σσς Sigma, Ττ Tau, Υυ Upsilon, Φφ Phi, Χχ Chi, Ψψ Psi, Ωω Omega
-                                                  ς
-                α β γ δ ε ζ η θ ι κ λ μ ν ξ ο π ρ σ τ υ φ χ ψ ω
-                Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω
-                l e a e p e t h o a a u u i m i h i a p h h s m
-                p t m l s t a e t p m       i   o g u s i i i e
-                h a m t i a   t a p b       c     m   i       g
-                a   a a l     a   a d       r     a   l       a
-                        o           a       o         o
-                        n                   n         n
-
 python regex:	{}[]()^$|.*+?\
 
 perl regex:		/{,}[]()^$.|*+?\
