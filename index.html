@@ -25,6 +25,16 @@ td {		margin: 0;
 /* ]]> */</style>
 <!--table {border-width: 0 0 1px 1px; border-style: solid;}-->
 <!--table, td, th {border:white; border-collapse:collapse;}-->
+<script type="text/x-mathjax-config;executed=true">
+	MathJax.Hub.Config({
+	messageStyle: "none",
+	showContext: false,
+	"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+	tex2jax: { inlineMath: [ ["\\\\(","\\\\)"] ], 
+			displayMath: [ ["\\[", "\\]"] ],
+			processEscapes: true, ignoreClass: "tex2jax_ignore|dno" }
+	});
+</script>
 <!--<script type="text/x-mathjax-config">-->
 <!--	MathJax.Hub.Config({-->
 <!--	"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },-->
@@ -55,6 +65,7 @@ td {		margin: 0;
 <link rel="stylesheet" type="text/css" href="./default.css"/>
 <!--____________________________________________________________--></head><body>
 <div id="Content"><!--&nbsp;<script type="math/tex;"></script>&nbsp;<br/>-->
+<!--https://raw.githubusercontent.com/OscarGodson/EpicEditor/develop/epiceditor/js/epiceditor.min.js-->
 <hr/><b>Logic</b><br/>
 <div style="float:right;"><table border="1pt"><!--βψ-->
 <tr>
@@ -150,7 +161,7 @@ td {		margin: 0;
 On a triangle with sides a, b, & c with angles A, B, & C opposite their respectful sides. Where&nbsp;<script type="math/tex;">1\text{turn}=τ=2π\text{Radians}=360°=400\text{gon}</script>;<br/>
 <script type="math/tex;">\begin{align}
 	c^2 &=a^2+b^2-2ab\cos C \\
-	\cos C &= \frac{a^2+b^2-c^2}{2ab} = \sum_{n=0}^\infty \frac{(-1)^n C^{2n}}{(2n)!} = 1 - \frac{C^2}{2!} + \frac{C^4}{4!} - \frac{C^6}{6!} + \text{. . .} = \prod_{n=1}^\infty\left(1 - \frac{4C^2}{π^2(2n-1)^2}\right)\\
+	\cos C &= \frac{a^2+b^2-c^2}{2ab} = \sum_{n=0}^\infty \frac{(-1)^n C^{2n}}{(2n)!} = 1 - \frac{C^2}{2!} + \frac{C^4}{4!} - \frac{C^6}{6!} + \text{. . .} = \prod_{n=1}^\infty\left(1 - \frac{C^2}{τ^2(2n-1)^2}\right)\\
 	\sin C &= \cos(C - \frac{1}{4} τ) = ±\sqrt{1-\cos^{2}C} \\
 	\tan C &= \frac{\cos(C - \frac{1}{4} τ)}{\cos C} = ±\frac{\sqrt{1-\cos^{2}C}}{\cos C} \\
 	\csc C &= \frac{1}{\cos(C - \frac{1}{4} τ)} = ±\frac{1}{\sqrt{1-\cos^{2}C}} \\
@@ -372,4 +383,4 @@ Perl Regex matching:		*={0,}		+={1,}		?={0,1}
 	5. {0,}+ Match at least n times and give nothing back
 	6. {n,m}+ Match at least n but not more than m times and give nothing back
 -->
-<!--((3^.5)-e+1)*4=0.05507591643-->
+<!--(e-3^.5) ≈ 0.98623102-->
